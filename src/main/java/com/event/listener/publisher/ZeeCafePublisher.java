@@ -3,7 +3,6 @@ package com.event.listener.publisher;
 import com.event.listener.events.ComedyShow;
 import com.event.listener.events.TheBigBangTheoryEvent;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 

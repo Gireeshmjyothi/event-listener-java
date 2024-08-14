@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class TransactionFailure {
     private String name;
     private Double amount;
+    private long accountNumber;
 }

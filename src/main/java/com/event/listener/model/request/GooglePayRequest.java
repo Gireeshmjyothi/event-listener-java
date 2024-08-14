@@ -13,4 +13,5 @@ public class GooglePayRequest {
     private String name;
     private double amount;
     private boolean condition;
+    private long accountNumber;
 }

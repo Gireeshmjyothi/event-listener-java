@@ -17,7 +17,7 @@ public class GooglePayController {
 
     @PostMapping("/pay")
     public String sendMoney(@RequestBody GooglePayRequest googlePayRequest){
-        return googlePay.sendMoney(googlePayRequest.getName(), googlePayRequest.getAmount(), googlePayRequest.isCondition());
+        return googlePay.sendMoney(googlePayRequest);
     }
 
 }
