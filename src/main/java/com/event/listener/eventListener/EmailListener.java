@@ -15,7 +15,7 @@ public class EmailListener {
         try {
             Thread.sleep(6000);
             System.out.println("Sending Email body \n" +
-                    "Hi " +  transactionFailure.getName() +"\n" + "Transaction has been failed with amount :" + transactionFailure.getAmount());
+                    "Hi.," +  transactionFailure.getName() +"\n" + "Transaction has been failed with amount :" + transactionFailure.getAmount());
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

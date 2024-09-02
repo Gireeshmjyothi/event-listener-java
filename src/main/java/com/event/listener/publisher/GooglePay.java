@@ -11,19 +11,24 @@ import org.springframework.stereotype.Component;
 public class GooglePay {
 
     private final ApplicationEventPublisher applicationEventPublisher;
+    int num;
 
     public String sendMoney(GooglePayRequest googlePayRequest){
-
         try {
-            if(googlePayRequest.isCondition()){
+            System.out.println("number :: " + num);
+            if (googlePayRequest.isCondition()) {
                 throw new RuntimeException("Transaction failed.");
             }
-            System.out.println("Hi : "+ googlePayRequest.getName());
-            System.out.println("Amount : "+ googlePayRequest.getAmount());
+            System.out.println("Hi..: " + googlePayRequest.getName());
+            System.out.println("Amount : " + googlePayRequest.getAmount());
             System.out.println("Money has been sent successfully.");
+
+
         }catch (Exception exp){
             applicationEventPublisher.publishEvent(new TransactionFailure(googlePayRequest.getName(), googlePayRequest.getAmount(), googlePayRequest.getAccountNumber()));
             return "Transaction failed.";
+        }finally {
+            System.out.println("executing finally bock.");
         }
         return "Money sent successfully";
     }
